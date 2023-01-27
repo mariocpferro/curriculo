@@ -18,6 +18,8 @@ body {
     background-color: #C1B8C8;
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
+    margin: 10px;
+    overflow-x: hidden;
 }
 
 div > li, ul {
@@ -60,54 +62,44 @@ p {
     background-image: linear-gradient(to left, #A9DDD6, #9BA0BC);
     padding: 10px;
     display: grid;
-    grid-template-columns: 800px 1fr auto;
+    grid-template-columns: minmax(200px, 700px) 2px minmax(400px, 600px);
     grid-column-gap: 10px;
+    border-radius: 10px;
 }
 
-.resumo {
-    width: 600px;
-}
 
-.linha {
+
+#linha1 {
     margin-top: 10px;
     height: 250px;
     border-right: 2px solid #29465c;
-    transform: translate(-300px, 0px);
 }
+
 
 .navegacao {
-    transform: translateX(-150px);
-}
-
-.navegacao > ul {
-    max-width: 300px;
-    margin: 30px auto;
-    display: block;
+    width: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     font-size: 1.3em;
     font-style: italic;
 }
 
-span {
+span{
     width: 30px;
     padding: 5px;
-    position: relative;
-    top: 5px;
-    transform: translate(-150px, 0px);
 }
 
-i{
-    width: 30px;
-    padding-left: 8px;
-    position: relative;
-    margin-top: 10px;
-    transform: translate(-150px, 0px);
+.teste {
+    margin-left: 10px;
 }
 
 .content {
     grid-area: content;
     padding: 10px;
     display: grid;
-    grid-template-columns: 600px auto;
+    grid-template-columns: minmax(200px, 700px) 2px minmax(400px, 600px);
+    grid-column-gap: 10px;
 }
 
 .adendos {
@@ -144,4 +136,29 @@ h4+h4 {
     margin: 3px;
     padding: 3px;
     font-size: 1em;
+}
+
+#linha2 {
+    height: 400px;
+    border-right: 2px solid #29465c;
+}
+
+.infos-gerais {
+    height: 400px;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.infos-gerais h2 + p {
+    margin: 19px;
+}
+
+.infos-principal h2 {
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+.infos-principal p {
+    font-size: .8em;
+    width: 300px;
 }
